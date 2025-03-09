@@ -7,7 +7,6 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const PORT = 3000;
 const app = express();
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -76,6 +75,6 @@ app.post('/', async (req, res) => {
   }
 });
 
-app.listen(process.env.PORT || PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`Server is running on port ${PORT}`);
 });
